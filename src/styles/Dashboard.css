@@ -1,0 +1,268 @@
+/* Dashboard.css - Com letras verdes e fundo mais escuro */
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50; /* Fundo escuro: um azul marinho ou cinza bem escuro */
+    color: #ecf0f1; /* Cor do texto geral: um cinza bem claro para contrastar */
+  }
+  
+  /* Main container */
+  .dashboard-container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #34495e; /* Fundo do container: um pouco mais claro que o body */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada para destaque */
+  }
+  
+  /* Headings */
+  h1, h2 {
+    color: #2ecc71; /* Verde principal para títulos */
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3d566e; /* Linha de separação mais escura */
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+  }
+  
+  /* Buttons */
+  .dashboard-buttons button {
+    background-color: #2ecc71; /* Verde para os botões de navegação */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-buttons button:hover {
+    background-color: #27ae60; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Table styling */
+  .consultas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .consultas-table thead {
+    background-color: #2ecc71; /* Verde no cabeçalho da tabela */
+    color: white;
+  }
+  
+  .consultas-table th,
+  .consultas-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #4a657c; /* Borda mais escura para as linhas */
+    color: #ecf0f1; /* Cor do texto das células */
+  }
+  
+  .consultas-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+  
+  .consultas-table tbody tr:nth-child(even) {
+    background-color: #3b506b; /* Fundo um pouco diferente para linhas pares */
+  }
+  
+  .consultas-table tbody tr:hover {
+    background-color: #435c75; /* Fundo no hover das linhas */
+  }
+  
+  .consultas-table .delete-button {
+    background-color: #e74c3c; /* Vermelho para cancelar/excluir */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .consultas-table .delete-button:hover {
+    background-color: #c0392b; /* Vermelho mais escuro no hover */
+  }
+  
+  .consultas-table .no-id-span {
+    color: #95a5a6; /* Cinza para "ID ausente" */
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  
+  /* Form styling */
+  .form-container {
+    display: grid;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #3b506b; /* Fundo do formulário */
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .form-container label {
+    font-weight: bold;
+    color: #ecf0f1; /* Cor do texto dos labels */
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="datetime-local"],
+  .form-container select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #4a657c; /* Borda dos campos */
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    background-color: #2c3e50; /* Fundo dos campos de input/select */
+    color: #ecf0f1; /* Cor do texto digitado nos campos */
+  }
+  
+  .form-container input[type="text"]:focus,
+  .form-container input[type="datetime-local"]:focus,
+  .form-container select:focus {
+    border-color: #2ecc71; /* Borda verde no focus */
+    box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.25); /* Sombra verde no focus */
+    outline: none;
+  }
+  
+  .form-container button[type="submit"] {
+    background-color: #2ecc71; /* Verde para o botão de submit */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3); /* Sombra verde no botão */
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: #27ae60; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Loading and Error messages */
+  .loading-message,
+  .error-message {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  .loading-message {
+    background-color: #2ecc71; /* Fundo verde claro */
+    color: #1a5e3e; /* Texto verde escuro */
+    border: 1px solid #1a5e3e;
+  }
+  
+  .error-message {
+    background-color: #e74c3c; /* Fundo vermelho */
+    color: #721c24; /* Texto vermelho escuro */
+    border: 1px solid #721c24;
+  }
+
+  /* Dashboard.css */
+
+/* ... (código anterior para body, container, h1, h2) ... */
+
+/* Buttons de navegação (Área de Médicos, Área de Pacientes) */
+.dashboard-buttons {
+    margin-bottom: 30px; /* Adicionar mais espaço abaixo dos botões */
+    text-align: center; /* Centralizar os botões */
+  }
+  
+  .dashboard-buttons button {
+    background-color: #2ecc71; /* Verde esmeralda para os botões de navegação */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 10px; /* Margem horizontal para separar os botões */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 160px; /* Garante que os botões tenham um tamanho mínimo consistente */
+  }
+  
+  .dashboard-buttons button:hover {
+    background-color: #27ae60; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+  }
+  
+  /* ... (código anterior para table, th, td) ... */
+  
+  /* Botão Excluir/Cancelar dentro da tabela */
+  .consultas-table .delete-button {
+    background-color: #e74c3c; /* Vermelho para cancelar/excluir */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .consultas-table .delete-button:hover {
+    background-color: #c0392b; /* Vermelho mais escuro no hover */
+  }
+  
+  /* ... (código anterior para form-container, label, input, select) ... */
+  
+  /* Botão de submit do formulário (Marcar Consulta) */
+  .form-container button[type="submit"] {
+    background-color: #2ecc71; /* Verde para o botão de submit */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: #27ae60; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+  }
+  
+  /* ... (loading e error messages) ... */
